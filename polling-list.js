@@ -4,15 +4,21 @@ var pollingList = [
     times: 0 + 1, // 1 + 1
   },
   {
-    greatDeveloper: '李浩,闫双辉',
+    greatDeveloper: '李浩',
     times: 0,
   },
+  {
+    greatDeveloper: '闫双辉',
+    times: 0,
+  }
 ];
 
-const nextCatchUp = {
-  host: '孙瑞刚',
-  date: '2019/08/23',
-};
+const nextCatchUp = [
+  {
+    host: '孙瑞刚',
+    date: '2019/08/23',
+  },
+];
 
 const getRankList = () => {
   return pollingList.sort((per1, per2) => per2.times - per1.times).map(per => per.greatDeveloper);
