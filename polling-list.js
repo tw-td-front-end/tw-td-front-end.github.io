@@ -14,6 +14,10 @@ var pollingList = [
   {
     greatDeveloper: '杨婷婷',
     times: 0,
+  },
+  {
+    greatDeveloper: '张卫东',
+    times: 0,
   }
 ];
 
