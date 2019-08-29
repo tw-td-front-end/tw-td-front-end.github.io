@@ -26,6 +26,10 @@ var pollingList = [
   {
     greatDeveloper: '蒙玉航',
     times: 0,
+  },
+  {
+    greatDeveloper: '李毅平',
+    times: 0,
   }
 ];
 
