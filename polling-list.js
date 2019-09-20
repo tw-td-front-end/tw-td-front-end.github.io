@@ -9,7 +9,7 @@ var pollingList = [
   },
   {
     greatDeveloper: '闫双辉',
-    times: 0,
+    times: 1,
   },
   {
     greatDeveloper: '杨婷婷',

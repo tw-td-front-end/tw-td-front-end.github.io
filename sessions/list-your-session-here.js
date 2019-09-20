@@ -14,5 +14,10 @@ const allSession = [
     occurredDate: "2019/09/06",
     author: "李浩",
   },
+  {
+    topic: "Deep in JPEG",
+    occurredDate: "2019/09/20",
+    author: "闫双辉",
+  },
   // need your contribution
 ];

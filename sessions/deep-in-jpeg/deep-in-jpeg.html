@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deep in JPEG</title>
+    <script src="./exif-js.js"></script>
+    <style>
+        .left, .right{
+            width: 200px;
+        }
+        .img-item,img{
+            width: 300px;
+            margin-right: 20px;
+        }
+        .wrap{
+            display: flex;
+        }
+        pre{
+            white-space: pre-wrap
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="img-item">
+            <img id="img-1" src="./1.jpg">
+            <div id="btn-1">Get Meta</div>
+            <div id="rotate-1">Rotate</div>
+            <pre id="img-1-meta"></pre>
+        </div>
+        <div class="img-item">
+            <img id="img-2" src="./2.jpg">
+            <div id="btn-2">Get Meta</div>
+            <div id="rotate-2">Rotate</div>
+            <pre id="img-2-meta"></pre>
+        </div>
+        <div class="img-item">
+            <img id="img-3" src="./3.jpg">
+            <div id="btn-3">Get Meta</div>
+            <div id="rotate-3">Rotate</div>
+            <pre id="img-3-meta"></pre>
+        </div>
+        <div class="img-item">
+            <img id="img-4" src="./4.jpg">
+            <div id="btn-4">Get Meta</div>
+            <div id="rotate-4">Rotate</div>
+            <pre id="img-4-meta"></pre>
+        </div>
+    </div>
+    <script>
+        function getMata(imgId){
+            var img = document.querySelector(`#${imgId}`)
+            EXIF.getData(img, function() {
+                var allMetaData = EXIF.getAllTags(this);
+                var allMetaDataSpan = document.getElementById(`${imgId}-meta`);
+                allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, "\t");
+            })
+        }
+        [1,2,3,4].forEach(key => {
+            var btn = document.querySelector(`#btn-${key}`)
+            btn.onclick = () => getMata(`img-${key}`)
+
+            var rotate = document.querySelector(`#rotate-${key}`)
+            rotate.onclick = () => {
+                var metaStr = document.querySelector(`#img-${key}-meta`).innerText
+                var metaJSON = JSON.parse(metaStr)
+                var rotate = getRotate(metaJSON.Orientation)
+                var img = document.querySelector(`#img-${key}`)
+                img.style.transform = `rotate(${rotate}deg)`
+            }
+        })
+
+        /**
+         * http://blog.csdn.net/libins/article/details/50973498
+         * http://blog.csdn.net/han_jiang_xue/article/details/8266207
+         * http://www.360doc.com/content/17/0219/18/37253146_630338662.shtml
+         * 默认角度
+         * 0° = 1
+         * 逆时针90° = 6
+         * 顺时针90° = 8
+         * 180° = 3
+         */
+        function getRotate(orientation){
+            var rotate = 0
+            switch(orientation){
+                case 1: {
+                    rotate = 0
+                    break;
+                }
+                case 6: {
+                    rotate = 90
+                    break;
+                }
+                case 8: {
+                    rotate = -90
+                    break;
+                }
+                case 3: {
+                    rotate = -180
+                    break;
+                }
+                default: {
+                    rotate = 0
+                }
+            }
+            return rotate
+        }
+    
+    </script>
+</body>
+</html>
