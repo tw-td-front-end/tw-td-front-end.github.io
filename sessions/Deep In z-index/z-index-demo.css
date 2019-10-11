@@ -1,0 +1,40 @@
+body {
+    background: #f5f5f5;
+}
+button {
+    width: 120px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background: #0084ff;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.z-index-row {
+    height: 425px;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+.img1 {
+    position: absolute;
+    z-index: 1;
+}
+.img2 {
+    position: absolute;
+    z-index: 2;
+    margin-left: 200px;
+}
+.inline-block, .block {
+    width: 300px;
+    height: 200px;
+}
+.inline-block {
+    display: inline-block;
+    background: orange;
+    margin: -30px;
+}
+.block {
+    display: block;
+    background: red;
+}

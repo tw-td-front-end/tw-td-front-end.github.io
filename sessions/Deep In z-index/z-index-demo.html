@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deep In z-index</title>
+    <link href="z-index-demo.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+    function clickFlex() {
+        let flexEl = document.getElementById("flex");
+        flexEl.style.display = "flex";
+    }
+    function clickOpacipty() {
+        let flexEl = document.getElementById("opacity");
+        flexEl.style.opacity = "0.5";
+    }
+    function clickTransform() {
+        let flexEl = document.getElementById("transform");
+        flexEl.style.transform = "translateX(10px)";
+    }
+</script>
+<body>
+    <div class="z-index-row">
+        <div class="z-index-title">如果定位元素z-index没有发生嵌套</div>
+        <img src="huge01.jpg" style="position: absolute;z-index: 1;">
+        <img src="./huge02.jpg" style="position: absolute;z-index: 2;margin-left: 200px;">
+    </div>
+
+    <div class="z-index-row">
+        <div class="z-index-title">如果定位元素z-index发生嵌套</div>
+        <div style="position: relative;z-index: 1">
+            <img src="huge01.jpg" style="position: absolute;z-index: 2;">
+        </div>
+        <div style="position: relative;z-index: 2">
+            <img src="./huge02.jpg" style="position: absolute;z-index: 1;margin-left: 200px;">
+        </div>
+    </div>
+    <div class="z-index-row">
+        <div class="z-index-title">内联元素牛逼于浮动元素</div>
+        <div style="float:left;width: 100px;height: 100px;background: red">floatfloatfloatfloatfloat</div>
+       <!-- <img src="huge01.jpg" style="float: left;margin-right: -20px;">-->
+        <span style="color: red">内联元素牛逼于浮动元素内联元素牛逼于浮动元素内联元素牛逼于浮动元素内联元素牛逼于浮动元素</span>
+    </div>
+    <div class="z-index-row">
+        <div class="inline-block">inline-block</div>
+        <div class="block">block</div>
+    </div>
+    <div class="z-index-row">
+        <div class="z-index-title">为什么定位元素会覆盖普通的元素</div>
+        <img src="huge01.jpg"> <!--style="position: relative"-->
+        <img src="./huge02.jpg" style="margin-left: -200px;">
+    </div>
+    <div class="z-index-row">
+        <div class="z-index-title">flex与层叠上下文<button onclick="clickFlex()">display:flex</button></div>
+        <div id="flex" style="background: blue;width: 600px;margin-left: 30px"><!--display:flex-->
+            <div style="z-index: 1">
+                <img src="huge01.jpg" style="z-index: -1;position: relative;margin-left: -37px">
+            </div>
+        </div>
+
+    </div>
+    <div class="z-index-row">
+        <div class="z-index-title">opacipty与层叠上下文<button onclick="clickOpacipty()">opacity:0.5</button></div>
+        <div id="opacity" style="background: blue;width: 600px;margin-left: 30px"><!--opacity:0.5-->
+            <img src="huge01.jpg" style="z-index: -1;position: relative;margin-left: -37px">
+        </div>
+    </div>
+    <div class="z-index-row">
+        <div class="z-index-title">transform与层叠上下文<button onclick="clickTransform()">translateX(10px)</button></div>
+        <div id="transform" style="background: blue;width: 600px;margin-left: 30px"><!--translateX(10px);-->
+            <img src="huge01.jpg" style="z-index: -1;position: relative;margin-left: -37px">
+        </div>
+    </div>
+</body>
+</html>
