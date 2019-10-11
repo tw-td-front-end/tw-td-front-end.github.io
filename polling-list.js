@@ -13,7 +13,7 @@ var pollingList = [
   },
   {
     greatDeveloper: '杨婷婷',
-    times: 0,
+    times: 1,
   },
   {
     greatDeveloper: '张卫东',
