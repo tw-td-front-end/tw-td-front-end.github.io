@@ -21,7 +21,7 @@ var pollingList = [
   },
   {
     greatDeveloper: '王风珠',
-    times: 0,
+    times: 1,
   },
   {
     greatDeveloper: '蒙玉航',

@@ -19,5 +19,10 @@ const allSession = [
     occurredDate: "2019/09/20",
     author: "闫双辉",
   },
+  {
+    topic: "Async & Event-Loop in JS",
+    occurredDate: "2019/11/22",
+    author: "王风珠",
+  },
   // need your contribution
 ];
