@@ -17,7 +17,7 @@ var pollingList = [
   },
   {
     greatDeveloper: '张卫东',
-    times: 0,
+    times: 1,
   },
   {
     greatDeveloper: '王风珠',
@@ -130,7 +130,7 @@ var pollingList = [
   {
     greatDeveloper: '王霞',
     times: 0,
-  }
+  },
 ];
 
 const nextCatchUp = [
@@ -141,12 +141,14 @@ const nextCatchUp = [
 ];
 
 const getRankList = () => {
-  return pollingList.sort((per1, per2) => per2.times - per1.times).map(per => per.greatDeveloper);
+  return pollingList
+    .sort ((per1, per2) => per2.times - per1.times)
+    .map (per => per.greatDeveloper);
 };
 
 const getLeastTimesPerson = () => {
   let leastTimesPerson = pollingList[0];
-  pollingList.forEach((person) => {
+  pollingList.forEach (person => {
     if (person.times < leastTimesPerson.times) {
       leastTimesPerson = person;
     }
@@ -154,5 +156,5 @@ const getLeastTimesPerson = () => {
   return leastTimesPerson;
 };
 
-console.log('Who has least times:', getLeastTimesPerson());
-console.log('Rank list:', getRankList());
+console.log ('Who has least times:', getLeastTimesPerson ());
+console.log ('Rank list:', getRankList ());
