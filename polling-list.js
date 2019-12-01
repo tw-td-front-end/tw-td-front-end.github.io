@@ -126,6 +126,10 @@ var pollingList = [
   {
     greatDeveloper: '杨帆',
     times: 0,
+  },
+  {
+    greatDeveloper: '王霞',
+    times: 0,
   }
 ];
 
