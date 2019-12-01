@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div>
+    <span id="a"></span>
+    <span id="b"></span>
+  </div>
+</body>
+<script src="./Dep.js"></script>
+<script src="./defineReactive.js"></script>
+<script src="./Watcher.js"></script>
+<script>
+  var data = {
+    a:1
+  }
+  defineReactive(data,"a");
+  var vm = {_watchers:[]}
+  function render() {
+    document.querySelector("#a").innerText = data.a;
+  }
+  render();
+  var watcher = new Watcher(vm,render)
+</script>
+</html>

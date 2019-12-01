@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div>
+    a:<span id="a"></span></br>
+    b:<span id="b"></span></br>
+    c:<span id="c"></span></br>
+  </div>
+</body>
+<script src="./Dep.js"></script>
+<script src="./defineReactive.js"></script>
+<script src="./Watcher.js"></script>
+<script>
+  var data = {
+    a:1,
+    b:2,
+    c:1
+  }
+  var vm = {_watchers:[]}
+  defineReactive(data,"a");
+  defineReactive(data,"b");
+  defineReactive(data,"c");
+  var vm = {_watchers:[]}
+  function render() {
+    if(data.a===1){
+      document.querySelector("#a").innerText = data.a;
+      document.querySelector("#b").innerText = data.b;
+      document.querySelector("#c").innerText = "";
+    }else{
+      document.querySelector("#a").innerText = data.a;
+      document.querySelector("#b").innerText = "";
+      document.querySelector("#c").innerText = data.c;
+    }
+  }
+  var watcher = new Watcher(vm,render);
+  // 问题：当我直接更新data.c的时候能不能修改触发render？
+  // 问题：当我更新data.a = 2后,然后再更新data.b时能不能触发render？
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./VueObserver.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <button id="btn">add</button>
+</body>
+<script>
+    const root = document.querySelector('#root')
+    const btn = document.querySelector('#btn')
+    const ob = VueObserver.reactive({
+        name: {
+            first :"zhang",
+            end: "san"
+        },
+        age: 10
+    })
+
+    let cAge = VueObserver.computed(() => ob.age * 2)
+    VueObserver.effect(() => {
+        debugger;
+        root.innerHTML = `<h1>${ob.name.first}---${ob.age}----${cAge.value}</h1>`
+    })
+    btn.onclick = function () {
+        ob.age += 1
+    }
+
+
+</script>
+
+</html>
