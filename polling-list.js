@@ -24,11 +24,11 @@ var pollingList = [
     times: 1,
   },
   {
-    greatDeveloper: '蒙玉航',
-    times: 0,
+    greatDeveloper: '刘瑞',
+    times: 1,
   },
   {
-    greatDeveloper: '李登辉',
+    greatDeveloper: '王蕾',
     times: 0,
   },
   {
@@ -60,8 +60,8 @@ var pollingList = [
     times: 0,
   },
   {
-    greatDeveloper: '刘瑞',
-    times: 1,
+    greatDeveloper: '蒙玉航',
+    times: 0,
   },
   {
     greatDeveloper: '王吉',
@@ -120,7 +120,7 @@ var pollingList = [
     times: 0,
   },
   {
-    greatDeveloper: '王蕾',
+    greatDeveloper: '李登辉',
     times: 0,
   },
   {
@@ -135,8 +135,8 @@ var pollingList = [
 
 const nextCatchUp = [
   {
-    host: '闫双辉',
-    date: '2019/09/20',
+    host: '王蕾',
+    date: '2019/09/27',
   },
 ];
 
