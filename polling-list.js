@@ -61,7 +61,7 @@ var pollingList = [
   },
   {
     greatDeveloper: '刘瑞',
-    times: 0,
+    times: 1,
   },
   {
     greatDeveloper: '王吉',
