@@ -16,6 +16,10 @@ var pollingList = [
     times: 1,
   },
   {
+    greatDeveloper: '王西明',
+    times: 1,
+  },
+  {
     greatDeveloper: '张卫东',
     times: 1,
   },
@@ -33,10 +37,6 @@ var pollingList = [
   },
   {
     greatDeveloper: '刘融',
-    times: 1,
-  },
-  {
-    greatDeveloper: '王西明',
     times: 1,
   },
   {
