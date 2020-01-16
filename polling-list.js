@@ -29,11 +29,11 @@ var pollingList = [
   },
   {
     greatDeveloper: '王蕾',
-    times: 0,
+    times: 1,
   },
   {
     greatDeveloper: '刘融',
-    times: 0,
+    times: 1,
   },
   {
     greatDeveloper: '王西明',
