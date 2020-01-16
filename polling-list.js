@@ -37,7 +37,7 @@ var pollingList = [
   },
   {
     greatDeveloper: '王西明',
-    times: 0,
+    times: 1,
   },
   {
     greatDeveloper: '严腾',
