@@ -1,7 +1,7 @@
 var pollingList = [
   {
     greatDeveloper: '孙瑞刚',
-    times: 1, // 1 + 1
+    times: 1 + 1, // 1 + 1
   },
   {
     greatDeveloper: '李浩',
@@ -41,7 +41,7 @@ var pollingList = [
   },
   {
     greatDeveloper: '严腾',
-    times: 0,
+    times: 1,
   },
   {
     greatDeveloper: '李毅平',
