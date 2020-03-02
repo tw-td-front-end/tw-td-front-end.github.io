@@ -45,10 +45,14 @@ var pollingList = [
   },
   {
     greatDeveloper: '李毅平',
-    times: 0,
+    times: 1,
   },
   {
     greatDeveloper: '张昊毅',
+    times: 0,
+  },
+  {
+    greatDeveloper: '侯宇鑫',
     times: 0,
   },
   {
