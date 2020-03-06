@@ -10,3 +10,5 @@ share your interest, share your question, share your solution
 3. /workshop 同上请建目录，附带讲述人的课件，同学们的自己的作业。最后添加自己讲workshop的信息（讲述人、发生日期、主题）多期的话，每一添加一条记录
 
 4. /problems 同上新建目录，请包含问题描述、问题的解决方法（或许有代码）以及结论
+
+[test](/articles/test)
