@@ -1,8 +1,7 @@
-title: Tw TD Front-end #博客标题
+title: TW TD Front-end #博客标题
 redirect_from: /
 description: ThoughtWorks Telecom Digital Front-end Community #博客描述
 keywords: blog,css,html,php #博客关键字
 author: "tw-td"
-background: "images/home.png"
 
 theme: jekyll-theme-cayman
