@@ -1,4 +1,8 @@
-> 原文摘自 https://github.com/something-want-to-say/puzzle/issues/11
+# 虚拟DOM与其diff算法简介
+
+----
+
+> 原文摘自 [https://github.com/something-want-to-say/puzzle/issues/11](https://github.com/something-want-to-say/puzzle/issues/11)
 
 在这个病毒环绕的时间段里，通过几天的文章阅读，有解决了自己的一个~遗留依旧的~问题。今天则是要说一下这个虚拟DOM的事情。在_文章的最后，我会将参考的文章列出。_
 还是作为一个前端开发人员，那么就在来了解一下虚拟DOM（Virtual DOM），其实这东西也在15年的时候就已经有一篇文章说明了，当时还是因为react兴起后，为了解释这个虚拟DOM的好处来说明的。在这里还是简单的说明一下。
