@@ -1,0 +1,20 @@
+<div class="home">
+  <div class="cover-image" style="background: url({{"" | prepend: site.home_image }}) center no-repeat; background-size: cover;">
+    <div class="sub-title">{{site.sub_title}}</div>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="home-menus">
+  {% for menu in site.menus offset:0 limit:4 %}
+    {% if menu.title %}
+      <div class="menu">
+        <a href="{{menu.title | prepend: "menus/"}}">
+          <div class="menu-img" style="background: url({{"" | prepend: menu.image }}) center no-repeat; background-size: cover;"></div>
+          <div class="menu-title">{{ menu.title }}</div>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+</div>
