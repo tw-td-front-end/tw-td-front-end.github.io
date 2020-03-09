@@ -14,11 +14,9 @@ menus:
   -
     title: Articles
     image: '/assets/img/articles.png'
-    description: ''
   -
     title: Sessions
     image: '/assets/img/sessions.png'
-    description: ''
 
 
 theme: jekyll-theme-cayman

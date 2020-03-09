@@ -1,4 +1,7 @@
-# 虚拟DOM与其diff算法简介
+---
+layout: post
+title: 虚拟DOM与其diff算法简介
+---
 
 ----
 
