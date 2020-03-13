@@ -3,7 +3,7 @@ description: ThoughtWorks Telecom Digital Front-end Community.
 keywords: blog,css,html,php #博客关键字
 
 #首页背景图
-home_image: /assets/img/home.png
+home_image: /assets/img/home.jpg
 #首页背景图上文字
 sub_title: Share your interest, share your question, share your solution
 author: TW-TD
@@ -13,10 +13,10 @@ author: TW-TD
 menus:
   -
     title: Articles
-    image: '/assets/img/articles.png'
+    image: '/assets/img/articles.jpg'
   -
     title: Sessions
-    image: '/assets/img/sessions.png'
+    image: '/assets/img/sessions.jpg'
 
 
 theme: jekyll-theme-cayman
